@@ -1,7 +1,7 @@
 # Twitter Bot with Twython
 This is the source code for my Twitter Bot: https://twitter.com/TLoveBotti
 
-## Installation (on a Raspberry Pi)
+## Installation
 ```
 sudo apt-get update
 sudo apt-get upgrade
@@ -9,6 +9,8 @@ sudo apt-get install python-setuptools
 sudo easy_install pip
 sudo pip install twython
 ```
+Clone repository:
+```git clone https://github.com/TheHADILP/retweet_bot.git```
 
 ## Twitter creds
 After that you have to set up the API access on your Twitter account.
@@ -28,12 +30,7 @@ All retweeted Tweet-IDs are saved in the retweet_blacklist file.
 This ensures that no duplicate posts are sent.
 
 ## Execute
-Remember to make your script executable:
-
-```sudo chmod +x retweet.py```
-
-After that you can run and test the script:
-
+Run and test the script:
 ```python retweet.py```
 
 ## Automation with crontab
