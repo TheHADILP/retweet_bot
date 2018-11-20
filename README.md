@@ -42,7 +42,7 @@ this would go into crontab for automated execution at boot.
 
 
 ## Customization
-Please change the path variables in the retweet_forever.sh according to your file location!
+Please change the path variable in retweet_forever.sh according to your file location!
 
 You can customize the retweet.py script as you want (e.g. change the monitored accounts or buzzwords).  
 Everything is explained inside the Python script.
