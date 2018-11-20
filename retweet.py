@@ -24,7 +24,6 @@ users = [
         'kaman4010',
         'TelekomStefan',
         'TelekomBotsch',
-        'nessa_salberg',
         'PhillipGoik',
         'winfried_ebner',
         'dillinger4010',
@@ -84,7 +83,31 @@ while True:
                 nId = tweet['id_str']
                 
                 # List of buzzwords, modify as you like
-                buzzwords = ["telekom", "Telekom", "jetztmagenta", "LoveMagenta", "OpenTelekomCloud", "opentelekomcloud", "Develovers", "werkstolz", "ProudToBeT", "magentaverbindet", "YITT", "yitt", "telekomwall", "IoT", "Lehmschicht", "Entertain", "Security", "Glasfaser", "Netz", "Megadeal", "magentamuc"]
+                buzzwords = [
+                            'telekom',
+                            'Telekom',
+                            'jetztmagenta',
+                            'LoveMagenta',
+                            'OpenTelekomCloud',
+                            'opentelekomcloud',
+                            'Develovers',
+                            'werkstolz',
+                            'TelekomBotschafter',
+                            'ProudToBeT',
+                            'magentaverbindet',
+                            'erlebenwasverbindet',
+                            'YITT',
+                            'yitt',
+                            'telekomwall',
+                            'Telekomwall',
+                            'IoT',
+                            'Lehmschicht',
+                            'Entertain',
+                            'Security',
+                            'Glasfaser',
+                            'Netz',
+                            'magentamuc'
+                            ]
                 
                 # Check if there are any of our specified buzzwords in the tweet text
                 if any(n in tweet['text'] for n in buzzwords):
