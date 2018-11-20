@@ -35,10 +35,10 @@ Run and test the script with
 ## Automation with crontab
 For automation and logging purposes I wrote a Shell script which executes the Python script in an endless loop.
 
-Assuming your script files lie in the /home/pi/scripts/ folder (change the path according to your file location),
+Assuming your script files lie in the /home/pi/retweet_bot/ folder (change the path according to your file location),
 this would go into crontab for automated execution at boot.
 
-```@reboot /home/pi/scripts/retweet_forever.sh```
+```@reboot /home/pi/retweet_bot/retweet_forever.sh```
 
 
 ## Customization
