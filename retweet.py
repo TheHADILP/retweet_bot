@@ -4,7 +4,9 @@
 import sys, random, time
 from twython import Twython, TwythonError
 
-# Create application under https://apps.twitter.com/ and put the "Consumer Key", "Consumer Secret", "Access Token" and "Access Token Secret" in the twitter-creds file in separate lines (also remove all quotes inside twitter-creds)
+# Create an app under https://developer.twitter.com/en/apps
+# Put the "Consumer Key", "Consumer Secret", "Access Token" and "Access Token Secret" in the twitter-creds file in separate lines
+# Also remove all quotes inside twitter-creds
 with open('twitter-creds') as f:
     lines = f.read().splitlines()
 
@@ -66,18 +68,18 @@ users = [
 while True:
     try:
         if len(users) > 0:
-            # Select a random user in the array and remove it until the script restarts
+            # Select a random user in the array and remove it from there until the script restarts
             selected = users[random.randint(0,len(users))-1]
             users.remove(selected)
             print selected
 
-            # Get first tweet from the currently selected user's timeline
+            # Get the first tweet from the currently selected user's timeline
             try:
                 timeline = api.get_user_timeline(screen_name=selected, count=1, exclude_replies='true', include_rts='true')
             except TwythonError as e:
                 print e
 
-            
+            # Iterate over the Tweet
             for tweet in timeline:
                 nId = tweet['id_str']
                 
@@ -99,7 +101,9 @@ while True:
                         with open('retweet_blacklist', 'a') as file:
                             file.write('\n' + nId)
                         
-                        # Actually tweet to our account   CAREFULLY: This can also create a lot of mess on your account, better perform a "dry run" and check the console output before removing the #
+                        # Actually tweet to our account
+                        # CAREFUL: This can also create a lot of mess on your account
+                        # Better perform a "dry run" and check the console output before removing the #
                         #api.retweet(id = nId)
                         
                         # Put me to rest, modify this for how often you want me to tweet
