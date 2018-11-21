@@ -19,7 +19,7 @@ users = [
         'KriClement',
         'pepebellin',
         'FrauMagenta',
-        'ilove_openstack',
+        'iLoveOpenStack',
         'LudwigMetz1',
         'kaman4010',
         'TelekomStefan',
