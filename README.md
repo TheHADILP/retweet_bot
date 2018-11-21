@@ -23,6 +23,8 @@ Put each item on a separate line and remove all quotes.
 "Access Token"
 "Access Token Secret"
 ```
+Run the following command to prevent your API credentials being accidentally pushed to git:  
+```git update-index --skip-worktree twitter-creds```
 
 ## Blacklist
 All retweeted Tweet-IDs are saved in the retweet_blacklist file.
