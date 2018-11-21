@@ -23,7 +23,7 @@ users = [
         'LudwigMetz1',
         'kaman4010',
         'TelekomStefan',
-        'TelekomBotsch',
+        'MarcelRitonja',
         'PhillipGoik',
         'winfried_ebner',
         'dillinger4010',
