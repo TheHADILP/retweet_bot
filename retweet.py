@@ -113,7 +113,7 @@ while True:
                 if any(n in tweet['text'] for n in buzzwords):
                     
                     # Check if the tweet wasn't already tweeted by us, "old" tweet ids are saved in the retweet_blacklist file
-                    if nId not in open('retweet_blacklist').read():
+                    if nId not in open('retweet-blacklist').read():
                         # This is a new tweet for us
                         print 'nId: ' + nId
                         print tweet['text'].encode('utf-8')
@@ -121,7 +121,7 @@ while True:
                         print ''
                         
                         # Write the new tweet id to the blacklist to remember that we already tweeted it
-                        with open('retweet_blacklist', 'a') as file:
+                        with open('retweet-blacklist', 'a') as file:
                             file.write('\n' + nId)
                         
                         # Actually tweet to our account
