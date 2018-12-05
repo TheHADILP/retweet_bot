@@ -6,8 +6,7 @@ This is the source code for my Twitter Bot: https://twitter.com/TLoveBotti
 sudo apt update
 sudo apt upgrade
 sudo apt install python-setuptools
-sudo easy_install pip
-sudo pip install twython
+sudo easy_install twython
 ```
 Clone repository:
 ```git clone https://github.com/TheHADILP/retweet_bot.git```
