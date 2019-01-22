@@ -4,15 +4,13 @@
 import sys, random, time
 from twython import Twython, TwythonError
 
-# Create an app under https://developer.twitter.com/en/apps
-# Put the "Consumer Key", "Consumer Secret", "Access Token" and "Access Token Secret" in the twitter-creds file in separate lines
-# Also remove all quotes inside twitter-creds
+# Your API credentials are read from the twitter-creds file
 with open('twitter-creds') as f:
     lines = f.read().splitlines()
 
 api = Twython(*lines)
 
-# List of user accounts to check, modify as you like
+# List of user accounts to check
 users = [
         'alexluyken',
         'StefKch1',
@@ -80,7 +78,7 @@ while True:
             for tweet in timeline:
                 nId = tweet['id_str']
                 
-                # List of buzzwords, modify as you like
+                # List of buzzwords the tweet is checked for
                 buzzwords = [
                             'telekom',
                             'Telekom',
@@ -118,20 +116,17 @@ while True:
                         print '     TWEETED!!! (NEW ON MY PROFILE)                  #####'
                         print ''
                         
-                        # Write the new tweet id to the blacklist to remember that we already tweeted it
+                        # Add the new tweet id to the blacklist to remember that we already tweeted it
                         with open('retweet-blacklist', 'a') as file:
                             file.write('\n' + nId)
                         
-                        # Actually tweet to our account
-                        # CAREFUL: This can also create a lot of mess on your account
-                        # Better perform a "dry run" and check the console output before removing the #
-                        #api.retweet(id = nId)
+                        # Actually tweet to your account
+                        api.retweet(id = nId)
                         
-                        # Put me to rest, modify this for how often you want me to tweet
-                        #time.sleep(5400)
-                        time.sleep(2)
+                        # Wait x amount of time before the next tweet
+                        time.sleep(900)
                     else:
-                        # Duplicate found, proceed to the next user in our array
+                        # Duplicate tweet found, proceed to the next user in our array
                         print '     DUPLICATE FOUND'
                         
                         # Put me to rest, so I won't exceed API limits
@@ -145,8 +140,7 @@ while True:
                     time.sleep(2)
                     break
         else:
-            # Our user list is empty, end of script
-            # See you in the next round when retweet_forever.sh starts us over again
+            # Our user list is empty
             print 'EMPTY, RESTARTING SCRIPT...'
             break
     except TwythonError as e:
