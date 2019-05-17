@@ -1,3 +1,5 @@
+New version (based on Docker & Python3) can be found here: https://github.com/TheHADILP/docker_retweet_bot
+
 # Retweet-Bot for Twitter with Twython
 This is the source code for my Twitter Bot: https://twitter.com/TLoveBotti
 
