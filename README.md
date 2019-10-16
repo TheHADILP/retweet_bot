@@ -1,4 +1,4 @@
-New version (based on Docker & Python3) can be found here: https://github.com/TheHADILP/docker_retweet_bot
+New version (based on Docker & Python3) can be found here: https://github.com/shaderecker/docker_retweet_bot
 <br><br><br>
 
 # Retweet-Bot for Twitter with Twython
@@ -12,7 +12,7 @@ sudo apt install python-setuptools
 sudo easy_install twython
 ```
 Clone repository:
-```git clone https://github.com/TheHADILP/retweet_bot.git```
+```git clone https://github.com/shaderecker/retweet_bot.git```
 
 ## API credentials
 Now you can set up the API access for your Twitter account on https://developer.twitter.com/en/apps
